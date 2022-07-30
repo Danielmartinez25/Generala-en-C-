@@ -11,14 +11,14 @@ void cortarPrograma(int num);                   ///Corta el programa
 void menuReglas();                              /// Muestra el menu con las reglas
 void menuCombinacionesGanadoras();              /// Muestra las combinaciones ganadoras
 void mostrarDados(int v[]);
-void cargarVector (int v[], int tam, int fila); /// Declaración función carga vector enteros.
-void mostrarVector (int v[], int tam);          /// Declaración función muestra vector enteros.
-void cargarNombre1 (char v[], int tam);         /// Declaración función carga vector nombres.
-void copiarNombre1 (char v[], char v2[]);        /// Declaración función muestra vector nombre.
+void cargarVector (int v[], int tam, int fila); /// Declaraciï¿½n funciï¿½n carga vector enteros.
+void mostrarVector (int v[], int tam);          /// Declaraciï¿½n funciï¿½n muestra vector enteros.
+void cargarNombre1 (char v[], int tam);         /// Declaraciï¿½n funciï¿½n carga vector nombres.
+void copiarNombre1 (char v[], char v2[]);        /// Declaraciï¿½n funciï¿½n muestra vector nombre.
 void mostrarNombre(char v[]);
 void ceroVector (int v[10], int tam);           /// Pone en 0 vector puntos.
 void menosUnoVector (int v[10][2]);             /// Pone tabla de puntos en -1.
-void mostrarTabla (int v[10][2], int tam, char vecNom1[20], char vecNom2[20]);      /// Muestra los puntos de cada posición del vector.
+void mostrarTabla (int v[10][2], int tam, char vecNom1[20], char vecNom2[20]);      /// Muestra los puntos de cada posiciï¿½n del vector.
 int  numeros1A6(int v[5], int numero);          /// Suma el numero que se pase por parametro
 void copiarPuntos (int v[]);
 void ordenarDados(int v[]);                     /// Ordena los dados de menor a mayor
@@ -48,9 +48,9 @@ void empateGenerala(char vecNom1[],char vecNom2[], int &lanzamiento1, int &lanza
 
 ////--------------------------------------------------------------------------------------------------------
 
-void menuReglas(){
+void menuReglas(){ 
 system("cls");
-cout<<"                              ¡Bienvenido a Generala!                             "<<endl<<endl;
+cout<<"                              ï¿½Bienvenido a Generala!                             "<<endl<<endl;
 cout<<"                                 Reglas generales            "<<endl<<endl;
 cout<<" 1. El objetivo del juego es sacar Generala Servida,o la mayor"<<endl;
 cout<<"puntuacion a lo largo de 10 rondas"<<endl<<endl;
@@ -70,7 +70,7 @@ system("cls");
 
 void menuCombinacionesGanadoras(){
 system("cls");
-cout<<"                              ¡Bienvenido a Generala!                             "<<endl<<endl;
+cout<<"                              ï¿½Bienvenido a Generala!                             "<<endl<<endl;
 cout<<"                       Combinaciones para el calculo de puntaje                "<<endl;
 cout<<endl;
 cout<<" 1. GENERALA: Se obtienen 5 dados con el mismo valor. En caso de sacar generala en el "<<endl;
@@ -84,7 +84,7 @@ cout<<" 4. ESCALERA: Se obtienen 5 dados enforma creciente. Puede empezar en el 
 cout<<endl;
 cout<<" 5. JUEGO DE NUMEROS: En caso de no obtener ninguna combinacion antes mencionada, se tomara el "<<endl;
 cout<<"puntaje del resultado de multiplicar la cantidad de dados con valor repetido por ese mismo valor."<<endl;
-cout<<" Nota: Siempre que se de este resultado, se tomará el valor mas alto disponible. Si obtuve 3 dados "<<endl;
+cout<<" Nota: Siempre que se de este resultado, se tomarï¿½ el valor mas alto disponible. Si obtuve 3 dados "<<endl;
 cout<<"con valor 1 y dos dados con valor 5 y 6 respectivamente, el juego tomara como valor para el "<<endl;
 cout<<"calculo de punto el numero 6"<<endl<<endl;
 system("pause");
@@ -139,7 +139,7 @@ void mostrarNombre(char v[20]){
 void cargarNombre1 (char *v, int tam){
 
     cout<<"INGRESAR NOMBRE: ";
-    fflush(stdin);                          ///Evita que salte la línea.
+    fflush(stdin);                          ///Evita que salte la lï¿½nea.
     cin.getline (v,19);
 
     system("cls");
@@ -434,10 +434,10 @@ int i, j, vecDados[5], puntos[10][2],cantidadJug=1, jugador=0, rondas, totalPunt
         gotoxy(66,25);
         system("pause");
         system("cls");
-        mostrarTabla(puntos,cantidadJug,nombre1, nombre2);                  /// Envía a función tabla el vector de puntos, la cantidad de jugadores
+        mostrarTabla(puntos,cantidadJug,nombre1, nombre2);                  /// Envï¿½a a funciï¿½n tabla el vector de puntos, la cantidad de jugadores
                                                                             /// y el nombre.
         jugador=0;
-        tirada(vecDados,5,puntos,jugador,cantidadJug,nombre1, nombre2,&i, &j, totalPuntaje, lanzamiento1, lanzamiento2);     /// Le envía a función tirada el vector de dados, el tamaño de vector dados,
+        tirada(vecDados,5,puntos,jugador,cantidadJug,nombre1, nombre2,&i, &j, totalPuntaje, lanzamiento1, lanzamiento2);     /// Le envï¿½a a funciï¿½n tirada el vector de dados, el tamaï¿½o de vector dados,
                                                                             /// el vector puntos, la cantidad de jugadores (en este caso 1) y el nombre.
     }
     totalPuntaje=sumarVector(puntos,jugador);
@@ -683,7 +683,7 @@ void tirada (int v[], int tam, int puntos[10][2], int jugador, int tam2, char ve
         }
 
 
-                if(jugador<2&&contador==1){                                 /// 2 siempre aleatorio / 4 opción modo de tirada.
+                if(jugador<2&&contador==1){                                 /// 2 siempre aleatorio / 4 opciï¿½n modo de tirada.
                     gotoxy(100,6);
                     cout<<"SI DESEA LANZAR...";
                     gotoxy(90,7);
@@ -1007,7 +1007,7 @@ void tirada (int v[], int tam, int puntos[10][2], int jugador, int tam2, char ve
                         if(jugador>1){
                             int salto=0;
                             for(i=0;i<cantDados;i++){
-                            gotoxy(76,21+(salto));                                 /// Según los dados que elija el usuario se carga aleatoreamente esa posición (n-1).
+                            gotoxy(76,21+(salto));                                 /// Segï¿½n los dados que elija el usuario se carga aleatoreamente esa posiciï¿½n (n-1).
                             cout<<"Dado numero: ";
                             cin>>n;
                             gotoxy(76,22+(salto));
@@ -1018,7 +1018,7 @@ void tirada (int v[], int tam, int puntos[10][2], int jugador, int tam2, char ve
                         }
                         else{
                         int espaciado=0; //espaciado2=0;
-                        for(i=0;i<cantDados;i++){                   /// Según los dados que elija el usuario se carga aleatoreamente esa posición (n-1).
+                        for(i=0;i<cantDados;i++){                   /// Segï¿½n los dados que elija el usuario se carga aleatoreamente esa posiciï¿½n (n-1).
                             gotoxy(113+(espaciado),20);
                             cin>>n;
                             gotoxy(114+(espaciado),20);
@@ -1075,7 +1075,7 @@ void tirada (int v[], int tam, int puntos[10][2], int jugador, int tam2, char ve
     ceroVector (validacion,10);
 
 
-// Comprobación de juegos.
+// Comprobaciï¿½n de juegos.
     uno=numeros1A6(vecDados,1);
     if(uno>0){
         validacion [0]=uno;
@@ -1148,11 +1148,11 @@ void tirada (int v[], int tam, int puntos[10][2], int jugador, int tam2, char ve
         bool corte=false;
             for(jug=jugador;jug<2;jug++){
                 while(corte==false){                                      /// Evita que ingrese a chequear jugador 2 cuando solamente tiene que chequear jugador 1.
-                    if (puntos[j][jug]==-1&&validacion[j]>0){             /// Entra si puntaje en tabla está en -1 y la validacion tiene puntaje (mayor a 0).
+                    if (puntos[j][jug]==-1&&validacion[j]>0){             /// Entra si puntaje en tabla estï¿½ en -1 y la validacion tiene puntaje (mayor a 0).
                         opcion++;
                         contador2=contador2+1;
                         gotoxy(70,22+opcion);
-                        cout<<opcion<<" - "<<nombresJuegos[j][0]<<" = "<<validacion[j]<<endl; /// Muestra opción, nombre de juego disponible y valor de combinación.
+                        cout<<opcion<<" - "<<nombresJuegos[j][0]<<" = "<<validacion[j]<<endl; /// Muestra opciï¿½n, nombre de juego disponible y valor de combinaciï¿½n.
                         posicionVecValidacion[contador2]=j;
                     }
                     corte=true;
@@ -1200,7 +1200,7 @@ void tirada (int v[], int tam, int puntos[10][2], int jugador, int tam2, char ve
     cout<<"\t\t\t\t\t\t\t\t\t OPCION: ";
     cin>>opc;
 
-/// Switch selección anulación combinación.
+/// Switch selecciï¿½n anulaciï¿½n combinaciï¿½n.
     switch(opc){
         case 1: for(jug=jugador;jug<2;jug++){
                     puntos[posicionVecValidacion[0]][jug]=0;
@@ -1258,7 +1258,7 @@ void tirada (int v[], int tam, int puntos[10][2], int jugador, int tam2, char ve
     }
     else{
 
-/// Switch selección puntos.
+/// Switch selecciï¿½n puntos.
     switch(opc){
 
         case 1: for(jug=jugador;jug<2;jug++){
@@ -1441,7 +1441,7 @@ void ordenarDados(int v[]){
 
 /// ----------------------------------------------------------------------------------------------------------------
 
-/// Suma los números iguales dentro del vector.
+/// Suma los nï¿½meros iguales dentro del vector.
 int numeros1A6(int v[5], int numero)
 {
     int suma = 0;
@@ -1510,11 +1510,11 @@ int i, j, vecDados[5], puntos[10][2],cantidadJug=1, jugador=2, rondas, totalPunt
         gotoxy(66,25);
         system("pause");
         system("cls");
-        mostrarTabla(puntos,cantidadJug,nombre1, nombre2);                  /// Envía a función tabla el vector de puntos, la cantidad de jugadores
+        mostrarTabla(puntos,cantidadJug,nombre1, nombre2);                  /// Envï¿½a a funciï¿½n tabla el vector de puntos, la cantidad de jugadores
                                                                             /// y el nombre.
 
         jugador=2;
-        tirada(vecDados,5,puntos,jugador,cantidadJug,nombre1, nombre2,&i, &j, totalPuntaje, lanzamiento1, lanzamiento2);     /// Le envía a función tirada el vector de dados, el tamaño de vector dados,
+        tirada(vecDados,5,puntos,jugador,cantidadJug,nombre1, nombre2,&i, &j, totalPuntaje, lanzamiento1, lanzamiento2);     /// Le envï¿½a a funciï¿½n tirada el vector de dados, el tamaï¿½o de vector dados,
                                                                             /// el vector puntos, la cantidad de jugadores (en este caso 1) y el nombre.
     }
     totalPuntaje=sumarVector(puntos,jugador-2);
@@ -1733,14 +1733,14 @@ int i, j, u, vecDados[5], puntos[10][2],cantidadJug=2, jugador, rondas, puntaje1
 
 
 void informacionRonda(char n[], int puntos[10][2], int l){
-cout<<"Jugador: "<<n<<" | "<<"Ronda n° "<<"***"<<" | "<<"Puntaje total: "<<puntos[10][2]<< endl;
+cout<<"Jugador: "<<n<<" | "<<"Ronda nï¿½ "<<"***"<<" | "<<"Puntaje total: "<<puntos[10][2]<< endl;
         cout<<"---------------------------------------------------------------------"<<endl;
         if (l==1){
-            cout<<"Lanzamientos restantes: "<<l<<" | "<<"¡Ultimo lanzamiento!"<<endl;
+            cout<<"Lanzamientos restantes: "<<l<<" | "<<"ï¿½Ultimo lanzamiento!"<<endl;
         }
         else{
             if (l==0){
-                cout<<"Lanzamientos restantes: "<<l<<" | "<<"¡Ya no quedan lanzamientos!"<<endl;
+                cout<<"Lanzamientos restantes: "<<l<<" | "<<"ï¿½Ya no quedan lanzamientos!"<<endl;
             }
             else{
                 cout<<"Lanzamientos restantes: "<<l<<endl;
